@@ -1,1 +1,1 @@
-# Localizing-human-pose-with-MPII-dataset
+# Localizing-the-key-points-using-GAN-framework
