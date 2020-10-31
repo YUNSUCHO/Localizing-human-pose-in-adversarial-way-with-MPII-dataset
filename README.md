@@ -70,19 +70,19 @@ train-ad-deafault-retrain.sh
 - A bash file has following configurations, that one can change 
 ```
 python trainmodel-adversarial-mode-exp24.py \
---path lsp_dataset/lsp_dataset \
---modelName pre-train-discriminator-with-LSP-keepdimension \
+--path mpii \
+--modelName  trainmodel-adversarial-with-pretrain-defaultalpha-retrain \
 --config config.default_config \
 --batch_size 1 \
 --use_gpu \
 --gpu_device 0 \
 --lr .00025 \
---print_every 1 \
---train_split 0.9167 \
+--print_every 5000 \
+--train_split 0.90 \
 --loss mse \
 --optimizer_type Adam \
 --epochs 230 \
---dataset  'lsp' 
+--dataset  'mpii' 
 ```
 Models are saved to `./trainmodel/` (can be changed using the argument --modelName in .sh file).  
 
