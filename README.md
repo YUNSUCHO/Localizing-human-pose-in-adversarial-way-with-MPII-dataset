@@ -94,7 +94,7 @@ test-adversarial-with-pretrain-defaultalpha-retrain.sh
 ## Datasets
 
 
-- ` MPII Dataset`: This dataset contains 25,000 images in 39 RGB nature. And this dataset covers 410 human activities that have been extracted from YouTube videos, and each image provided with an activity label.Each image contains 16 different co-ordinate body joints according to the human pose in every single image. Stored available co-ordinate joints in MPII dataset are right ankle, right knee, right hip, left hip, left knee, left ankle, pelvis, thorax, upper neck, head top, right wrist, right elbow, right shoulder, left shoulder, left elbow, left wrist. Every image has different size because it is not quadratic. But, most of the prominent person size is roughly 200 pixels length in the images.,
+- ` MPII Dataset`: This dataset contains 25,000 images in 39 RGB nature. And this dataset covers 410 human activities that have been extracted from YouTube videos, and each image provided with an activity label.Each image contains 16 different co-ordinate body joints according to the human pose in every single image. Stored available co-ordinate joints in MPII dataset are right ankle, right knee, right hip, left hip, left knee, left ankle, pelvis, thorax, upper neck, head top, right wrist, right elbow, right shoulder, left shoulder, left elbow, left wrist. Every image has different size because it is not quadratic. But, most of the prominent person size is roughly 200 pixels length in the images.
 
 
 
