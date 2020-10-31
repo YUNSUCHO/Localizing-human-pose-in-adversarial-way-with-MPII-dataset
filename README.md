@@ -1,10 +1,8 @@
-# Localizing-the-key-points-using-GAN-framework
-
-# Adversarial-Pose-Enstimation
+# Localizing-human-pose-with-MPII-dataset
 
 
 
-Investigation on adversarial learning for pose prediction in Leeds Sports Pose Dataset
+Experiments on adversarial learning for localizing the key-points in MPII Dataset
 
 
 Pytorch implementation of chen et al. "Adversarial PoseNet" for landmark localization on digital images.
@@ -16,11 +14,13 @@ The architecture was  proposed by [Yu Chen, Chunhua Shen, Xiu-Shen Wei, Lingqiao
 ## Lanmark localization 
 
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Lanmark%20localization%20.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/original.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/original1.png" width="300px"/>
 
 Before the augmentation techniques applied on the dataset
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Lanmark%20localization%20(after%20augmentation).png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/augmented.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/augmented1.png" width="300px"/>
 
 After the augmentation techniques applied on the dataset
 
@@ -30,20 +30,19 @@ The results of this implementation:
 - Red dot stands for the ground-truth co-ordinate joints, yellow dot stands for the prediction of the proposed model. 
 
 ### Adversarial PoseNet(In Adversarial setup using GAN framework):
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/original.png" width="200px"/><img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Ad%20mode.png" width="200px"/>
-
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.57.09%20PM.png" width="200px"/><img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/adversarial.png" width="200px"/>
 
 
 ### Stack-hour-glass Network(In supervised setup):
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/original.png" width="200px"/><img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/supervised%20mod.png" width="200px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.57.09%20PM.png" width="200px"/><img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/supervised.png" width="200px"/>
 
 ### localization rate of diffent setups on the test split:
 
-The PCK@0.2 metrics has been used to measure the performance of the proposed model.
+The PCKh@0.5 metrics has been used to measure the performance of the proposed model.
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Screen%20Shot%202020-10-29%20at%205.27.18%20PM.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.56.16%20PM.png" width="300px"/>
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Screen%20Shot%202020-10-29%20at%205.26.49%20PM.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.55.31%20PM.png" width="300px"/>
 
 
 ## Main Prerequisites
@@ -59,14 +58,14 @@ The PCK@0.2 metrics has been used to measure the performance of the proposed mod
 - Install Pytorch from https://pytorch.org/get-started/locally/
 - Clone this repository:
 ```bash
-git clone https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation.git
+git clone https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset.git
 ```
 
 
 ## Training and Test Details
 To train a model, run any of the .sh file starting with "train". For example :  
 ```bash
-Adversarialmodel-pretrain-with-keepdimension.sh 
+train-ad-deafault-retrain.sh 
 ```
 - A bash file has following configurations, that one can change 
 ```
@@ -89,17 +88,17 @@ Models are saved to `./trainmodel/` (can be changed using the argument --modelNa
 
 To test the model,
 ```bash
-test-Adversarialmodel-pretrain-with-keepdimension.sh
+test-adversarial-with-pretrain-defaultalpha-retrain.sh
 ```
 
 ## Datasets
 
 
-- ` Leeds Sports Pose Dataset`: The LSP-extended dataset contains 10,000 annotated images in the RGB nature of most sportspeople. Every image that have different sizes, since it is not quadratic. The images have scaled such that the most prominent person in the image is roughly 150 pixels in length. Each image has been annotated with 14 co-ordinate joints locations.The available body joints in the LSP-extended dataset are right ankle, right knee, right hip, left hip, left knee, left ankle, right wrist, right elbow, right shoulder, left shoulder, left elbow, left wrist, neck, head top.,
+- ` MPII Dataset`: This dataset contains 25,000 images in 39 RGB nature. And this dataset covers 410 human activities that have been extracted from YouTube videos, and each image provided with an activity label.Each image contains 16 different co-ordinate body joints according to the human pose in every single image. Stored available co-ordinate joints in MPII dataset are right ankle, right knee, right hip, left hip, left knee, left ankle, pelvis, thorax, upper neck, head top, right wrist, right elbow, right shoulder, left shoulder, left elbow, left wrist. Every image has different size because it is not quadratic. But, most of the prominent person size is roughly 200 pixels length in the images.,
 
 
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/original%20RGB%20.png" width="400px"/> 
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/RGB.png" width="400px"/> 
 
 
 ## Reference
