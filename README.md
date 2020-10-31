@@ -38,7 +38,7 @@ The results of this implementation:
 
 ### localization rate of diffent setups on the test split:
 
-The PCK@0.2 metrics has been used to measure the performance of the proposed model.
+The PCKh@0.5 metrics has been used to measure the performance of the proposed model.
 
 <img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.56.16%20PM.png" width="300px"/>
 
@@ -58,14 +58,14 @@ The PCK@0.2 metrics has been used to measure the performance of the proposed mod
 - Install Pytorch from https://pytorch.org/get-started/locally/
 - Clone this repository:
 ```bash
-git clone https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation.git
+git clone https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset.git
 ```
 
 
 ## Training and Test Details
 To train a model, run any of the .sh file starting with "train". For example :  
 ```bash
-Adversarialmodel-pretrain-with-keepdimension.sh 
+train-ad-deafault-retrain.sh 
 ```
 - A bash file has following configurations, that one can change 
 ```
@@ -88,13 +88,13 @@ Models are saved to `./trainmodel/` (can be changed using the argument --modelNa
 
 To test the model,
 ```bash
-test-Adversarialmodel-pretrain-with-keepdimension.sh
+test-adversarial-with-pretrain-defaultalpha-retrain.sh
 ```
 
 ## Datasets
 
 
-- ` Leeds Sports Pose Dataset`: The LSP-extended dataset contains 10,000 annotated images in the RGB nature of most sportspeople. Every image that have different sizes, since it is not quadratic. The images have scaled such that the most prominent person in the image is roughly 150 pixels in length. Each image has been annotated with 14 co-ordinate joints locations.The available body joints in the LSP-extended dataset are right ankle, right knee, right hip, left hip, left knee, left ankle, right wrist, right elbow, right shoulder, left shoulder, left elbow, left wrist, neck, head top.,
+- ` MPII Dataset`: This dataset contains 25,000 images in 39 RGB nature. And this dataset covers 410 human activities that have been extracted from YouTube videos, and each image provided with an activity label.Each image contains 16 different co-ordinate body joints according to the human pose in every single image. Stored available co-ordinate joints in MPII dataset are right ankle, right knee, right hip, left hip, left knee, left ankle, pelvis, thorax, upper neck, head top, right wrist, right elbow, right shoulder, left shoulder, left elbow, left wrist. Every image has different size because it is not quadratic. But, most of the prominent person size is roughly 200 pixels length in the images.,
 
 
 
