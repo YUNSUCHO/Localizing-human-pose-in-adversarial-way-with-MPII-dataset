@@ -1,10 +1,8 @@
-# Localizing-the-key-points-using-GAN-framework
-
-# Adversarial-Pose-Enstimation
+# Localizing-human-pose-with-MPII-dataset
 
 
 
-Investigation on adversarial learning for pose prediction in Leeds Sports Pose Dataset
+Experiments on adversarial learning for localizing the key-points in MPII Dataset
 
 
 Pytorch implementation of chen et al. "Adversarial PoseNet" for landmark localization on digital images.
@@ -16,11 +14,13 @@ The architecture was  proposed by [Yu Chen, Chunhua Shen, Xiu-Shen Wei, Lingqiao
 ## Lanmark localization 
 
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Lanmark%20localization%20.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/original.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/original1.png" width="300px"/>
 
 Before the augmentation techniques applied on the dataset
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Lanmark%20localization%20(after%20augmentation).png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/augmented.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/augmented1.png" width="300px"/>
 
 After the augmentation techniques applied on the dataset
 
@@ -30,20 +30,19 @@ The results of this implementation:
 - Red dot stands for the ground-truth co-ordinate joints, yellow dot stands for the prediction of the proposed model. 
 
 ### Adversarial PoseNet(In Adversarial setup using GAN framework):
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/original.png" width="200px"/><img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Ad%20mode.png" width="200px"/>
-
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.57.09%20PM.png" width="200px"/><img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/adversarial.png" width="200px"/>
 
 
 ### Stack-hour-glass Network(In supervised setup):
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/original.png" width="200px"/><img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/supervised%20mod.png" width="200px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.57.09%20PM.png" width="200px"/><img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/supervised.png" width="200px"/>
 
 ### localization rate of diffent setups on the test split:
 
 The PCK@0.2 metrics has been used to measure the performance of the proposed model.
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Screen%20Shot%202020-10-29%20at%205.27.18%20PM.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.56.16%20PM.png" width="300px"/>
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/Screen%20Shot%202020-10-29%20at%205.26.49%20PM.png" width="300px"/>
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.55.31%20PM.png" width="300px"/>
 
 
 ## Main Prerequisites
@@ -99,7 +98,7 @@ test-Adversarialmodel-pretrain-with-keepdimension.sh
 
 
 
-<img src="https://github.com/YUNSUCHO/Adversarial-Pose-Enstimation/blob/main/README/original%20RGB%20.png" width="400px"/> 
+<img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/RGB.png" width="400px"/> 
 
 
 ## Reference
