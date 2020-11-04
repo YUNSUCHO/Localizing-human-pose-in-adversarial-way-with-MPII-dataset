@@ -28,7 +28,7 @@ Followings are the examples of the RGB images in the given dataset and it's heat
 
 ##  Results Visualization
 The results of this implementation:
-In two different setup, the left side image is the ground-truth images with the key-points and the right side image is the output of the proposed model. In each images of the result,the red dot stands for the ground-truth co-ordinate joints,yellow dot stands for the prediction of the proposed model. 
+In two different setup, the left side image is the ground-truth images with the key-points and the right side image is the output of the proposed model. In each images of the result,the red dot stands for the ground-truth key-points and the yellow dot stands for the prediction of the proposed model. 
 For better understanding of the performance of the given model in two different setup,same image in the given dataset has been compared in two different settings.
 
 ### Adversarial PoseNet(In Adversarial setup using GAN framework):
