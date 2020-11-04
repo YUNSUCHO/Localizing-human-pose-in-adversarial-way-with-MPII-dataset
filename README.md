@@ -1,10 +1,6 @@
 # Localizing-human-pose-with-MPII-dataset
 
 
-
-Experiments on adversarial learning for localizing the key-points in MPII Dataset
-
-
 Pytorch implementation of chen et al. "Adversarial PoseNet" for landmark localization on digital images.
 The architecture was  proposed by [Yu Chen, Chunhua Shen, Xiu-Shen Wei, Lingqiao Liu, Jian Yang](https://scholar.google.com/citations?user=IWZubqUAAAAJ&hl=zh-CN) in 
 [Adversarial PoseNet: A Structure-aware Convolutional Network for Human Pose Estimation](https://arxiv.org/pdf/1705.00389). 
