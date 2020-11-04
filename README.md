@@ -14,6 +14,7 @@ The architecture was  proposed by [Yu Chen, Chunhua Shen, Xiu-Shen Wei, Lingqiao
 ## Lanmark localization 
 
 Based on the given RGB dataset, the heatmap has been created with key-points. To prevent the model get over-fitting situation, data augmentation techniques,which is one of the regularization has been applied. 
+
 Followings are the example of the RGB images in the given dataset and it's heatmap.
 
 <img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/original.png" width="300px"/>
