@@ -41,6 +41,9 @@ For better understanding of the performance of the given model in two different 
 ### localization rate of diffent setups on the test split:
 
 The PCKh@0.5 metrics has been used to measure the performance of the proposed model.
+The best accuracy of the proposed model that have been trained in supervised way is 85.49%
+The best accuracy of the proposed model that have been trained in adversarial way using GAN framework is 86.43%
+As a result, the results shows that the proposed model perform better in adversarial way to predict the human key-points with MPII dataset.
 
 <img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.56.16%20PM.png" width="300px"/>
 
