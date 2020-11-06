@@ -27,7 +27,7 @@ The results of this implementation:
 In two different setup, the left side image is the ground-truth images with the key-points and the right side image is the output of the proposed model. In each images of the result,the red dot stands for the ground-truth key-points and the yellow dot stands for the prediction of the proposed model. 
 For better understanding of the performance of the given model in two different setup,same image in the given dataset has been compared in two different settings.
 
-### Adversarial PoseNet(In Adversarial setup using GAN framework):
+### Adversarial PoseNet(In Adversarial setup):
 <img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/Screen%20Shot%202020-10-31%20at%202.57.09%20PM.png" width="200px"/><img src="https://github.com/YUNSUCHO/Localizing-human-pose-with-MPII-dataset/blob/main/READ/adversarial.png" width="200px"/>
 
 
